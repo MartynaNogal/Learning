@@ -32,7 +32,7 @@ while True:
         count = 0
         for i in range(len(los)):
             if guess[i] == letter:
-                print("You try to guess that letter again!")
+                print("Try to guess a letter again!")
                 letter = str(input("Guess your letter: "))
             if los[i] == letter:
                 guess[i] = letter
@@ -44,22 +44,22 @@ while True:
         for i in range(len(list_count)-2,len(list_count)-1):
             if list_count[i] == list_count[i+1]:
                 lose += 1
-        print("You have %.0f guess left." %(6-lose))
+        print("You have %.0f guesses left." %(6-lose))
         print(hangman[lose])
 
         if lose == 6:
-            print("You guess 6 letters incorrectly. You lose!")
+            print("You guessed 6 letters incorrectly. You lose!")
             break
 
         if los == guess:
-            print("Gratulation! The word is", "".join(guess))
+            print("Congratulation! The word is", "".join(guess))
             break
 
 
-    end = str(input("Do you want play again? "))
+    end = str(input("Play again? "))
     end = end.upper()
-    if end == "N" or "NO":
-        print("Thanks for game!")
+    if end == "N":
+        print("Thanks for the game!")
         break
 
 
